@@ -5,6 +5,8 @@ FROM python:3.7
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
+RUN apt-get update && apt-get install -y libzbar-dev
+
 # Set work directory
 RUN mkdir /code
 ENV WEBAPP_DIR=/code
