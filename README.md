@@ -31,3 +31,7 @@ When 'docker-compose up -d' its done a PostgreSQL container is created and autom
 ## What about 'if present'?
 
 This project its thinking on very specific use, which waits for a QR Code with a structure similar to: '{'name': 'Jhon Doe', 'mobile': '555555', 'code': 'AnyCodeXX'}'. Thats why it decodes the QR Code looking for those fields. But if the QR Code has another structure it will also decode it and stores that data in the 'other' column in database.
+
+## Using venvs
+
+Unfortunately, its not possible to record video on Mac from inside a Docker container (if it does please let me know). That's why I had to use venv to install pyzbar and OpenCV and run the code. Just pip instal requirements.txt in your venv. 
