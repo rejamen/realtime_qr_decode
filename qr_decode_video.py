@@ -1,5 +1,4 @@
 # import the necessary packages
-#add comments for testing
 from imutils.video import VideoStream
 from pyzbar import pyzbar
 import argparse
