@@ -6,14 +6,15 @@ services:
     container_name: db
     volumes:
       - postgres_data:/var/lib/postgresql/data/
+      - .:/docker-entrypoint-initdb.d
     ports:
       - 5432:5432
   opencv:
     build: .
     container_name: opencv
-    # command: python /code/qr_decode_video.py
+    #command: python /code/qr_decode_video.py
     volumes:
-      - .:/code
+      - /Users/king/Documents/projects/realtime_qr_decode:/code
     ports:
       - 8000:8000
     depends_on:
@@ -21,4 +22,4 @@ services:
 
 volumes:
   postgres_data:
-    
+  code:
