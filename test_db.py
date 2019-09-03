@@ -3,10 +3,10 @@ import psycopg2
 try:
 	conn = psycopg2.connect(host = "localhost",
 							port = "5432",
-							database = "aidooit_login", 
-							user = "postgres", 
+							database = "aidooit_login",
+							user = "postgres",
 							password = "postgres")
-	
+
 	print('Connection success!!!')
 	# Print PostgreSQL version
 	cursor = conn.cursor()
@@ -17,7 +17,7 @@ try:
 	#Create table query
 #	create_table_query = '''CREATE TABLE login_data
 #			(id SERIAL PRIMARY KEY,
-#			name TEXT NOT NULL, 
+#			name TEXT NOT NULL,
 #			mobile TEXT NOT NULL,
 #			code TEXT NOT NULL);'''
 #	cursor.execute(create_table_query)

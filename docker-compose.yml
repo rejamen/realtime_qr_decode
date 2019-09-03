@@ -9,15 +9,16 @@ services:
       - .:/docker-entrypoint-initdb.d
     ports:
       - 5432:5432
+
   opencv:
     build: .
     container_name: opencv
-    #command: python /code/qr_decode_video.py
+    command: python /code/qr_decode_video.py
     volumes:
       - /Users/king/Documents/projects/realtime_qr_decode:/code
     ports:
       - 8000:8000
-    depends_on:
+    links:
       - db
 
 volumes:
